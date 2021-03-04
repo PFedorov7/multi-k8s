@@ -1,0 +1,36 @@
+{
+	"AWSEBDockerrunVersion": 2,
+	"containerDefinitions": [
+		{
+			"name": "client",
+			"image": "pfedorov/multi-client",
+			"hostname": "client",
+			"essential": false
+		}, 
+		{
+			"name": "server",
+			"image": "pfedorov/multi-server",
+			"hostname": "api",
+			"essential": false	
+		},
+		{
+			"name": "worker",
+			"image": "pfedorov/multi-worker",
+			"hostname": "worker",
+			"essential": false
+		},
+		{
+			"name": "nginx",
+			"image": "pfedorov/multi-nginx",
+			"hostname": "nginx",
+			"essential": true,
+			"portMappings": [
+				{
+					"hostPort": 80,
+					"containerPort":80
+				}
+			],
+			"links": ["client", "server"]
+		}
+	]
+}
