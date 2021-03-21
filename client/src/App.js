@@ -17,7 +17,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Welcome to Pasha Fedorov deployment
+            Welcome to Pasha Fedorov deployment, Final Version
           </a>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
