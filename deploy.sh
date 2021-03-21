@@ -12,5 +12,5 @@ docker push pfedorov/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=pfedorov/multi-server:$SHA
-kubectl set image deployments/client-deployment server=pfedorov/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=pfedorov/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=pfedorov/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=pfedorov/multi-worker:$SHA
